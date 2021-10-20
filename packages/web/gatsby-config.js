@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "JMI Alumni VIC AU Chapter",
   },
-  plugins: ["gatsby-plugin-emotion"],
+  plugins: ["gatsby-plugin-typescript","gatsby-plugin-emotion"],
 };
