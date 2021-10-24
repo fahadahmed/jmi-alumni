@@ -1,8 +1,13 @@
 import React from 'react';
-
+import { GetInvolvedSection, HeroSection, HomeContainer, NewsSection, ProjectsSection } from './components';
 function Home() {
   return (
-    <div>This is the home page</div>
+    <HomeContainer>
+      <HeroSection />
+      <NewsSection />
+      <GetInvolvedSection />
+      <ProjectsSection />
+    </HomeContainer>
   )
 }
 

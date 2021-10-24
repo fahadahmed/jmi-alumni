@@ -1,1 +1,1 @@
-export { default } from './GetInvolvedSection'; 
+export { default as GetInvolvedSection } from './GetInvolvedSection'; 

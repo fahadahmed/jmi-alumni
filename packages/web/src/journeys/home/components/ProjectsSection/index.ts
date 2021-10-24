@@ -1,1 +1,1 @@
-export { default } from './ProjectsSection';
+export { default as ProjectsSection } from './ProjectsSection';
