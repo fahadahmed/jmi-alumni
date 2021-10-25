@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import Header from './Header';
 import Footer from './Footer';
-
+import './layout.css';
 interface LayoutProps {
   children: ReactNode
 }
