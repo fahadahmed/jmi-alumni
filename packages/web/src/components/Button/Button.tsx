@@ -16,9 +16,24 @@ const StyledButton = styled.button`
     cursor: pointer;
   }
 `;
-function Button() {
+
+const LargeButton = styled(StyledButton)`
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 16px 32px;
+  margin: 40px 0px;
+`;
+
+type ButtonType = 'button' | 'submit' | 'reset';
+interface Props {
+  title: string;
+  type: ButtonType;
+  variant?: string;
+}
+function Button({ title, type, variant }: Props) {
   return (
-    <StyledButton>Contact Us</StyledButton>
+    variant === 'big' ? <LargeButton type={type}>{title}</LargeButton> : <StyledButton type={type}>{title}</StyledButton>
   )
 }
 

@@ -19,7 +19,7 @@ function ContactForm() {
         <Input />
         <Input />
         <Textarea />
-        <Button />
+        <Button type="submit" title="Send" />
       </StyledForm>
     </div>
   )

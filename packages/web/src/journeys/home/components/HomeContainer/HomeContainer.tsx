@@ -8,10 +8,10 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 32px;
-  grid-area:
-    'hero' 'hero'
-    'news' 'news'
-    'projects' 'getInvolved';
+  grid-template-areas:
+    'hero hero'
+    'news news'
+    'projects getInvolved';
     grid-gap: 32px;
 `;
 function HomeContainer({ children }: HomeContainerProps) {
