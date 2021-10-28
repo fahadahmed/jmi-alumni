@@ -4,8 +4,8 @@ import styled from '@emotion/styled';
 const StyledButton = styled.button`
   border: none;
   padding: 12px 24px;
-  background: #FA957C;
-  border: 2px solid #FA957C;
+  background: #E8CF4C;
+  border: 2px solid #E8CF4C;
 
   font-family: 'Source Sans Pro';
   font-size: 16px;
@@ -27,7 +27,8 @@ const LargeButton = styled(StyledButton)`
   margin: 40px 0px;
 
   &:hover {
-    border: 2px solid #FFFFFF;
+    border: 2px solid #E8CF4C;
+    color: #E8CF4C;
   }
 `;
 

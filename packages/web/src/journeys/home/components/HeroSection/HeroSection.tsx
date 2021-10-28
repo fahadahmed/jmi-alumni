@@ -26,8 +26,8 @@ const MessageContainer = styled.div`
 const PageTitle = styled.h1`
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro';
-  font-weight: 500;
+  font-family: 'Roboto Slab';
+  font-weight: 600;
   font-size: 64px;
   color: #FFFFFF;
   text-align: center;
