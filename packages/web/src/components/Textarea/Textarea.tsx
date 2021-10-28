@@ -4,6 +4,9 @@ import styled from '@emotion/styled';
 const StyledTextarea = styled.textarea`
   padding: 12px 16px;
   margin: 8px 0px;
+  border: 1px solid #e5e5e5;
+
+  border-radius: 0px;
   width: 100%;
   resize: none;
   height: 150px;
@@ -20,7 +23,6 @@ const StyledTextarea = styled.textarea`
     color: #2C6150;
     outline: none;
     box-shadow: 0px 0px 4px 0px #999999;
-    border-radius: 0px;
   }
 `;
 
