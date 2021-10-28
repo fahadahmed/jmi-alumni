@@ -5,6 +5,7 @@ const StyledButton = styled.button`
   border: none;
   padding: 12px 24px;
   background: #FA957C;
+  border: 2px solid #FA957C;
 
   font-family: 'Source Sans Pro';
   font-size: 16px;
@@ -13,6 +14,7 @@ const StyledButton = styled.button`
 
   &:hover {
     background: #2C6150;
+    border: 2px solid #2C6150;
     cursor: pointer;
   }
 `;
@@ -23,6 +25,10 @@ const LargeButton = styled(StyledButton)`
   font-weight: 600;
   padding: 16px 32px;
   margin: 40px 0px;
+
+  &:hover {
+    border: 2px solid #FFFFFF;
+  }
 `;
 
 type ButtonType = 'button' | 'submit' | 'reset';
