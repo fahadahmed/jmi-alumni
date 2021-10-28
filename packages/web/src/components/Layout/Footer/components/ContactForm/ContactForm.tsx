@@ -1,10 +1,26 @@
 import React from 'react';
+import styled from '@emotion/styled';
+import Input from '../../../../Input';
+import Textarea from '../../../../Textarea';
+import Button from '../../../../Button';
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0px;
+`;
 
 function ContactForm() {
   return (
     <div>
       <h4>Contact Form</h4>
-      <p>Display the contact form here.</p>
+      <StyledForm>
+        <Input />
+        <Input />
+        <Textarea />
+        <Button />
+      </StyledForm>
     </div>
   )
 }

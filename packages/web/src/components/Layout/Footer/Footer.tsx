@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 import { AboutSection, ContactForm, InstagramFeed } from './components';
 
 const FooterContainer = styled.div`
-  background-color: #6F6F6F;
+  background-color: #efefef;
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 64px;
 
   h4 {
     font-family: 'Source Sans Pro';
