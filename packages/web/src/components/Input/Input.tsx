@@ -12,7 +12,7 @@ const StyledInput = styled.input`
   font-size: 16px;
 
   &::placeholder {
-    color: #efefef;
+    color: #999999;
   }
 
   &:focus {

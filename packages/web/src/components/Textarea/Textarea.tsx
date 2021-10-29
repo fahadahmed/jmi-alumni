@@ -15,7 +15,7 @@ const StyledTextarea = styled.textarea`
   font-size: 16px;
 
   &::placeholder {
-    color: #efefef;
+    color: #999999;
   }
 
   &:focus {
