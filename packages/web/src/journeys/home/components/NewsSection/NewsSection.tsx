@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import Modal from 'react-modal';
+import Button from '../../../../components/Button';
 
 
 Modal.setAppElement('#___gatsby');
@@ -17,7 +18,7 @@ const data = [
     title: 'COVID-19 Fundraiser',
     byline: 'Our JMI Alumni VIC family and donated $10,000 to Helping Hands Foundation India towards Covid Home Isolation care services.',
     featuredImage: 'https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/katt-yukawa-K0E6E0a0R3A-unsplash.jpg?alt=media&token=f8084665-433f-4365-b127-45e8b07bade7',
-    content: '<p> Jamia Millia Islamia Alumni Association, Victoria has worked effectively in the past to provide help to the community through fund-raising in instances like Australian Bushfires 2019 and establishment of scholarships for female students at the Jamia University.</p><p>During the COVID crisis in India, the Alumni Association came together to raise funds to help underprivileged people who needed support due to COVID -19. The collected funds were used to provide medicines, supply of oxygen, online doctor consultations at the ground level. We had partnered with "Helping Hand " an NGO based in India. https://helpinghandf.org</p><p>With support from within the Association and wider community, we were able to achieve our target of 10,000 AUD within a week\'s time. We extend our heartfelt gratitude to all our donors who have continued to make donations even after the target collection amount was reached. We made an initial transfer of funds to Helping Hand Foundation based in Hyderabad India https://www.facebook.com/HelpingHandFoundationHyderabad</p><p>Considering the current pandemic plight in India we will continue with our endeavours to support the underprivileged. We will identify and collaborate with other not-for-profit organizations and will continue with our pledge to help our fellow Indians in these testing times.</p><p>We encourage you to ask any questions related to the objectives of our organization and the purpose of this fundraising. We look forward to your valuable contribution and support.</p>'
+    content: '<p> Jamia Millia Islamia Alumni Association, Victoria has worked effectively in the past to provide help to the community through fund-raising in instances like Australian Bushfires 2019 and establishment of scholarships for female students at the Jamia University.</p><p>During the COVID crisis in India, the Alumni Association came together to raise funds to help underprivileged people who needed support due to COVID -19. The collected funds were used to provide medicines, supply of oxygen, online doctor consultations at the ground level. We had partnered with "Helping Hand " an NGO based in India. <a href="https://helpinghandf.org" target="_blank">https://helpinghandf.org</a></p><p>With support from within the Association and wider community, we were able to achieve our target of 10,000 AUD within a week\'s time. We extend our heartfelt gratitude to all our donors who have continued to make donations even after the target collection amount was reached. We made an initial transfer of funds to Helping Hand Foundation based in Hyderabad India <a href="https://www.facebook.com/HelpingHandFoundationHyderabad" target="_blank">https://www.facebook.com/HelpingHandFoundationHyderabad</a></p><p>Considering the current pandemic plight in India we will continue with our endeavours to support the underprivileged. We will identify and collaborate with other not-for-profit organizations and will continue with our pledge to help our fellow Indians in these testing times.</p><p>We encourage you to ask any questions related to the objectives of our organization and the purpose of this fundraising. We look forward to your valuable contribution and support.</p>'
   },
   {
     id: 3,
@@ -88,6 +89,36 @@ const LinkButton = styled.button`
   }
 `;
 
+const ArticleContent = styled.div`
+  p {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: 16px;
+  }
+  a {
+    color: #E8CF4C;
+  }
+`;
+
+const StyledButton = styled.button`
+  border: none;
+  padding: 12px 24px;
+  background: #E8CF4C;
+  border: 2px solid #E8CF4C;
+
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  line-height: 16px;
+  color: #2C6150;
+
+  &:hover {
+    background: #2C6150;
+    color: #FFFFFF;
+    border: 2px solid #2C6150;
+    cursor: pointer;
+  }
+`;
+
 function NewsSection() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -99,6 +130,7 @@ function NewsSection() {
   }
 
   function closeModal() {
+    console.log("we are here.")
     setIsOpen(false);
   }
 
@@ -127,12 +159,11 @@ function NewsSection() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-
         <img src={selectedArticle?.featuredImage} alt="" width="100%" />
-        <h2>{selectedArticle?.title}</h2>
-        <blockquote>{selectedArticle?.byline}</blockquote>
-        <div dangerouslySetInnerHTML={{ __html: selectedArticle?.content }}></div>
-        <button onClick={closeModal}>close</button>
+        <CardTitle>{selectedArticle?.title}</CardTitle>
+        <Byline>{selectedArticle?.byline}</Byline>
+        <ArticleContent dangerouslySetInnerHTML={{ __html: selectedArticle?.content }}></ArticleContent>
+        <StyledButton onClick={() => closeModal()}>close</StyledButton>
       </Modal>
     </Container>
   )

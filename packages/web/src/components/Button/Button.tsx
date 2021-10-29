@@ -38,6 +38,7 @@ interface Props {
   title: string;
   type: ButtonType;
   variant?: string;
+  onClick?: () => void;
 }
 function Button({ title, type, variant }: Props) {
   return (

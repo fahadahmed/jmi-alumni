@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const MainContainer = styled.div`
   display: grid;
-  grid-template-rows: 64px 1fr 520px;
+  grid-template-rows: 96px 1fr 520px;
 `;
 
 function Layout({ children }: LayoutProps) {
