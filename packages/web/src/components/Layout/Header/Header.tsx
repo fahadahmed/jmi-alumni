@@ -7,14 +7,13 @@ const Container = styled.div`
   padding: 16px 24px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 `;
 
 
 function Header() {
   return (
     <Container>
-      <Link to="/"><img src={Logo} alt="JMI Alumni Logo" width="96px" height="96px" /></Link>
+      <Link to="/"><img src={Logo} alt="JMI Alumni Logo" width="144px" height="144px" /></Link>
     </Container>
   )
 }

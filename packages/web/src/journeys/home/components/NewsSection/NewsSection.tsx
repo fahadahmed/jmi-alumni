@@ -73,12 +73,10 @@ const Byline = styled.p`
 
 const customStyles = {
   content: {
-    top: '40%',
-    left: '50%',
-    right: '20%',
-    bottom: '0%',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    top: '0',
+    left: '0',
+    right: '0',
+    bottom: '0',
   },
 };
 

@@ -6,12 +6,10 @@ import Button from '../../../../components/Button';
 Modal.setAppElement('#___gatsby');
 const customStyles = {
   content: {
-    top: '40%',
-    left: '50%',
-    right: '20%',
-    bottom: '0%',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    top: '0',
+    left: '0',
+    right: '0',
+    bottom: '0',
   },
 };
 
@@ -109,6 +107,24 @@ const LinkButton = styled.button`
     text-decoration: underline;
   }
 `;
+const StyledButton = styled.button`
+  border: none;
+  padding: 12px 24px;
+  background: #E8CF4C;
+  border: 2px solid #E8CF4C;
+
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  line-height: 16px;
+  color: #2C6150;
+
+  &:hover {
+    background: #2C6150;
+    color: #FFFFFF;
+    border: 2px solid #2C6150;
+    cursor: pointer;
+  }
+`;
 
 function HomeSection() {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -149,6 +165,7 @@ function HomeSection() {
         <ModalText>The members of the Association and their friends and families meet socially to celebrate various occasions and events creating an atmosphere of mutual trust and close friendship.</ModalText>
         <ModalText>The Association aims to mobilize effective advocacy and leadership in the realization of a humane, respectful, fair and just society for all Victorians through awareness and education. Our aspiration is to contribute to the emergence of future leaders and role models for a better tomorrow to fulfil the dreams of our founders.</ModalText>
         <ModalText>Let’s reflect for a moment on the words of Bharat Ratna recipient and the first education minister of independent India, Maulana Abul Kalam Azad, “Educationists should build the capacities of the spirit of inquiry, creativity, entrepreneurial and moral leadership among students and become their role model”.</ModalText>
+        <StyledButton onClick={() => closeModal()}>close</StyledButton>
       </Modal>
     </HeroContainer>
   )

@@ -9,9 +9,9 @@ interface LayoutProps {
 
 const MainContainer = styled.div`
   display: grid;
-  grid-template-rows: 96px 1fr 520px;
+  grid-template-rows: 144px 1fr 520px;
   @media screen and (max-width: 425px) {
-    grid-template-rows: 96px auto 1fr;
+    grid-template-rows: 144px auto 1fr;
   }
 `;
 
