@@ -52,6 +52,12 @@ const StyledTextarea = styled.textarea`
   }
 `;
 
+const SubmitMessage = styled.p`
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  color: #E8CF4C;
+`;
+
 function ContactForm() {
   const [submitMessage, setSubmitMessage] = useState(null);
 
@@ -77,7 +83,7 @@ function ContactForm() {
         <StyledInput placeholder="Your email" type="email" required name="email" />
         <StyledTextarea placeholder="Your message" required name="message" />
         <Button type="submit" title="Send" />
-        {submitMessage && <p>{submitMessage}</p>}
+        {submitMessage && <SubmitMessage>{submitMessage}</SubmitMessage>}
       </StyledForm>
     </div>
   )
