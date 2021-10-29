@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Button from '../../../../components/Button';
 
 const HeroContainer = styled.div`
-  grid-area: hero;
+  // grid-area: hero;
 `;
 const Container = styled.div`
   background-color: #2C6150;

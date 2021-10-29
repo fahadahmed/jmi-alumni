@@ -1,12 +1,11 @@
 import React from 'react';
-import { GetInvolvedSection, HeroSection, HomeContainer, NewsSection, ProjectsSection } from './components';
+import { HeroSection, HomeContainer, NewsSection, LeadershipTeam } from './components';
 function Home() {
   return (
     <HomeContainer>
       <HeroSection />
       <NewsSection />
-      <GetInvolvedSection />
-      <ProjectsSection />
+      <LeadershipTeam />
     </HomeContainer>
   )
 }

@@ -4,8 +4,8 @@ import styled from '@emotion/styled';
 const data = [
   {
     id: 1,
-    instaImage: '',
-    altText: ''
+    instaImage: 'https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/instagram%2F122474691_10157991945143089_5469239370553563381_n.jpeg?alt=media&token=36d0e785-6969-4783-97b2-2eaba5daaf56',
+    altText: 'JMI Centenary Celebrations'
   },
   {
     id: 2,
@@ -57,8 +57,6 @@ const Container = styled.div`
 `;
 
 const Polaroid = styled.div`
-  background: #FFFFFF;
-  height: 96px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -70,7 +68,7 @@ function InstagramFeed() {
       <h4>Instagram Feed</h4>
       <Container>
         {data.map(item => (
-          <Polaroid>{item.id}</Polaroid>
+          <Polaroid><img src={item.instaImage} alt={item.altText} width="100%" /></Polaroid>
         ))}
       </Container>
     </div>

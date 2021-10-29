@@ -17,11 +17,13 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@types/react-modal": "^3.13.1",
     "gatsby": "^3.13.0",
     "gatsby-plugin-emotion": "^6.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-typescript": "^3.14.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.14.3"
   }
 }

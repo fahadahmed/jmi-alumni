@@ -10,10 +10,11 @@ const StyledButton = styled.button`
   font-family: 'Source Sans Pro';
   font-size: 16px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: #2C6150;
 
   &:hover {
     background: #2C6150;
+    color: #FFFFFF;
     border: 2px solid #2C6150;
     cursor: pointer;
   }

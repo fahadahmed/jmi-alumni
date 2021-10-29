@@ -12,8 +12,16 @@ const Container = styled.div`
 
   p {
     font-family: 'Source Sans Pro';
-    font-size: 16px;
-    color: #2C6150;
+    font-size: 20px;
+    color: #FFFFFF;
+    
+    a {
+      color: #E8CF4C;
+
+      &:hover {
+        color: #000000;
+      }
+    }
   }
 `;
 const Link = styled.a`
