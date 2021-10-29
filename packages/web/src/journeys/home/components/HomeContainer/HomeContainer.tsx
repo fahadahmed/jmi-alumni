@@ -9,6 +9,10 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   padding: 32px;
   grid-gap: 32px;
+  @media screen and (max-width: 425px) {
+    padding: 16px;
+    grid-gap: 16px;
+  }
 `;
 function HomeContainer({ children }: HomeContainerProps) {
   return (

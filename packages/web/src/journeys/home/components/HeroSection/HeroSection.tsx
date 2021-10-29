@@ -29,12 +29,20 @@ const Container = styled.div`
 const OuterContainer = styled.div`
   padding: 0px 64px;
   margin-top: -96px;
+  @media screen and (max-width: 425px) {
+    padding: 0px 24px;
+    margin-top: -112px;
+  }
 `;
 const MessageContainer = styled.div`
   background: #FFFFFF;
   border: 2px solid #2C6150;
   padding: 32px;
   text-align: center;
+  @media screen and (max-width: 425px) {
+    padding: 16px;
+    text-align: left;
+  }
 `;
 
 const PageTitle = styled.h1`
@@ -45,6 +53,9 @@ const PageTitle = styled.h1`
   font-size: 64px;
   color: #FFFFFF;
   text-align: center;
+  @media screen and (max-width: 425px) {
+    font-size: 32px;
+  }
 `;
 const Title = styled.div`
   display: flex;
@@ -59,12 +70,21 @@ const SubTitle = styled.h2`
   line-height: 48px;
   margin: 0;
   color: #2C6150;
+  @media screen and (max-width: 425px) {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
 `;
 const Text = styled.p`
   font-family: 'Source Sans Pro';
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
+  @media screen and (max-width: 425px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 `;
 
 const ModalText = styled.p`

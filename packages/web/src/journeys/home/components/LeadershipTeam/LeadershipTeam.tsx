@@ -6,12 +6,20 @@ const SectionTitle = styled.h2`
   font-size: 48px;
   font-weight: 600;
   color: #2C6150;
+  @media screen and (max-width: 425px) {
+    font-size: 32px;
+    text-align: center;
+  }
 `;
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 64px;
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+  }
 `;
 
 const Heading = styled.h3`
@@ -20,6 +28,9 @@ const Heading = styled.h3`
   font-weight: 600;
   margin: 0;
   color: #2C6150;
+  @media screen and (max-width: 425px) {
+    font-size: 20px;
+  }
 `;
 const Designation = styled.h4`
   font-family: 'Source Sans Pro';
@@ -35,8 +46,13 @@ const Team = styled.div`
   justify-content: center;
 `;
 const Image = styled.img`
+  width: 200px;
   border-radius: 100px;
   margin-bottom: 24px;
+  @media screen and (max-width: 425px) {
+    width: 100px;
+  border-radius: 100px;
+  }
 `;
 
 const data = [
@@ -91,7 +107,7 @@ function LeadershipTeam() {
       <Container>
         {data.map(member => (
           <Team key={member.id}>
-            <Image src={member.profileImage} alt={member.name} width="200px" />
+            <Image src={member.profileImage} alt={member.name} />
             <Heading>{member.name}</Heading>
             <Designation>{member.designation}</Designation>
           </Team>

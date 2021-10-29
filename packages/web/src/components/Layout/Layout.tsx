@@ -10,6 +10,9 @@ interface LayoutProps {
 const MainContainer = styled.div`
   display: grid;
   grid-template-rows: 96px 1fr 520px;
+  @media screen and (max-width: 425px) {
+    grid-template-rows: 96px auto 1fr;
+  }
 `;
 
 function Layout({ children }: LayoutProps) {

@@ -7,7 +7,6 @@ import Button from '../../../../Button';
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 32px 0px;
 `;
 

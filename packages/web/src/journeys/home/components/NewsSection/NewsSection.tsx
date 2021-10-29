@@ -35,11 +35,18 @@ const SectionTitle = styled.h2`
   font-size: 48px;
   font-weight: 600;
   color: #2C6150;
+  @media screen and (max-width: 425px) {
+    font-size: 32px;
+    text-align: center;
+  }
 `;
 const ArticlesContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+  }
 `;
 const Card = styled.div`
   background: #FFFFFF;

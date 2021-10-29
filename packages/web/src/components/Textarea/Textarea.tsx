@@ -3,11 +3,9 @@ import styled from '@emotion/styled';
 
 const StyledTextarea = styled.textarea`
   padding: 12px 16px;
-  margin: 8px 0px;
+  margin: 8px 0px 16px 0px;
   border: 1px solid #e5e5e5;
-
   border-radius: 0px;
-  width: 100%;
   resize: none;
   height: 150px;
 
