@@ -21,9 +21,15 @@ const StyledInput = styled.input`
     box-shadow: 0px 0px 4px 0px #999999;
   }
 `;
-function Input() {
+interface InputProps {
+  placeholderText: string;
+  value?: string;
+  required: boolean;
+  onChange: (value: string) => void
+}
+function Input({ placeholderText, required, onChange }: InputProps) {
   return (
-    <StyledInput type="text" placeholder="Enter placeholder text" />
+    <StyledInput type="text" placeholder={placeholderText} required={required} onChange={e => onChange(e.target.value)} />
   )
 }
 
