@@ -44,6 +44,9 @@ const ArticlesContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
   @media screen and (max-width: 425px) {
     grid-template-columns: 1fr;
   }

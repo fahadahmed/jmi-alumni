@@ -125,7 +125,7 @@ function HomeSection() {
       <Container>
         <Title>
           <PageTitle>JMI Alumni Association<br />of Victoria Australia</PageTitle>
-          <Button type="button" title="Become a member" variant="big" />
+          {/* <Button type="button" title="Become a member" variant="big" /> */}
         </Title>
       </Container>
       <OuterContainer>
