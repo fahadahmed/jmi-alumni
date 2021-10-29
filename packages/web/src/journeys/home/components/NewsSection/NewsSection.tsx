@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import Modal from 'react-modal';
-import Button from '../../../../components/Button';
 
 
 Modal.setAppElement('#___gatsby');
