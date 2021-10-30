@@ -140,7 +140,7 @@ function HomeSection() {
     <HeroContainer>
       <Container>
         <Title>
-          <PageTitle>JMI Alumni Association<br />of Victoria Australia</PageTitle>
+          <PageTitle>JMI Alumni Association<br />Victoria Australia</PageTitle>
           {/* <Button type="button" title="Become a member" variant="big" /> */}
         </Title>
       </Container>
