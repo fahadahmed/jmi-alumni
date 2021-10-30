@@ -74,6 +74,7 @@ function ContactForm() {
     setSubmitMessage('Your message has been submitted.')
     console.log(name, email, message);
     document.getElementById("contact-form").reset();
+    setTimeout(() => { setSubmitMessage(null) }, 3000);
   }
   return (
     <div>
