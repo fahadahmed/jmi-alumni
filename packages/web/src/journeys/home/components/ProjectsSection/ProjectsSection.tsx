@@ -1,8 +1,18 @@
 import React from 'react';
+import styled from '@emotion/styled';
+
+const Container = styled.div`
+  grid-area: projects;
+  display: grid;
+  min-height: 400px;
+  background-color: #efefef;
+  justify-content: center;
+  align-items: center;
+`;
 
 function ProjectsSection() {
   return (
-    <div>Projects Section</div>
+    <Container>Projects Section</Container>
   )
 }
 

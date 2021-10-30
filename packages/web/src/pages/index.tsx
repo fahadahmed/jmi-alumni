@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import { Helmet } from 'react-helmet';
 import Layout from '../components/Layout';
 import Home from '../journeys/home';
 
@@ -7,6 +7,7 @@ import Home from '../journeys/home';
 const IndexPage = () => {
   return (
     <Layout>
+      <Helmet title="JMI Alumni Association, Victoria, Australia" />
       <Home />
     </Layout>
   )
