@@ -18,6 +18,7 @@ const HeroContainer = styled.div`
   // grid-area: hero;
 `;
 const Container = styled.div`
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/homepage.png?alt=media&token=b7f6cebc-79f1-47d7-af0f-aa41cfc40987');
   background-color: #2C6150;
   min-height: 600px;
   display: grid;
