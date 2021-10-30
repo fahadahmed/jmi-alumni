@@ -12,7 +12,8 @@ module.exports = {
       }
     },
     "gatsby-plugin-typescript",
-    "gatsby-plugin-emotion", 
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-react-helmet", 
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
