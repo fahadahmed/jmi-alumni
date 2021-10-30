@@ -40,7 +40,7 @@ function AboutSection() {
           <a href="https://aajmi.co.in/" target="_blank">JMI Alumni Website</a>
         </p>
         <p><strong>Socials</strong></p>
-        <Link href=""><img src={FacebookIcon} alt="facebook" width="48" /></Link>
+        <Link href="https://m.facebook.com/Jamia-Millia-Islamia-Alumni-Victoria-105798758340245/" target="_blank"><img src={FacebookIcon} alt="facebook" width="48" /></Link>
         <Link href=""><img src={TwitterIcon} alt="twitter" width="48" /></Link>
         <Link href=""><img src={LinkedInIcon} alt="linkedin" width="48" /></Link>
         <Link href=""><img src={InstagramIcon} alt="instagram" width="48" /></Link>
