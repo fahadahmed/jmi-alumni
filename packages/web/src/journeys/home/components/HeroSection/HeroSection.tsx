@@ -20,17 +20,22 @@ const HeroContainer = styled.div`
 const Container = styled.div`
   background-image: url('https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/homepage.png?alt=media&token=b7f6cebc-79f1-47d7-af0f-aa41cfc40987');
   background-color: #2C6150;
-  min-height: 600px;
+  height: 600px;
   display: grid;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 425px) {
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+  }
 `;
 const OuterContainer = styled.div`
   padding: 0px 64px;
   margin-top: -96px;
   @media screen and (max-width: 425px) {
     padding: 0px 24px;
-    margin-top: -112px;
+    margin-top: -64px;
   }
 `;
 const MessageContainer = styled.div`
