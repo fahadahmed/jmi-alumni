@@ -1,7 +1,11 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.jmialumnivic.com.au",
-    title: "JMI Alumni VIC AU Chapter",
+    siteUrl: 'https://www.jmialumnivic.com.au',
+    title: 'JMI Alumni VIC AU Chapter',
   },
   plugins: [
     {
@@ -9,7 +13,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-Z7N04QN058", // Google Analytics / GA
+          process.env.JMI_MEASUREMENT_ID, // Google Analytics / GA
         ],
         // This object is used for configuration specific to this plugin
         pluginConfig: {
@@ -18,33 +22,32 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-emotion",
-    "gatsby-plugin-react-helmet", 
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Source Sans Pro\:300,400,600,700,900`,
-          `Roboto Slab\:400,500,600,700,900`
+          `Roboto Slab\:400,500,600,700,900`,
         ],
-        display: 'swap'
-      }
+        display: 'swap',
+      },
     },
     {
-      resolve: "gatsby-plugin-firebase",
+      resolve: 'gatsby-plugin-firebase',
       options: {
         credentials: {
-          apiKey: "AIzaSyDCkXsIiv1gRWI1VJ405P8_hblfrz_l8GU",
-          authDomain: "jmi-alumni-vic-au-chapter.firebaseapp.com",
-          projectId: "jmi-alumni-vic-au-chapter",
-          storageBucket: "jmi-alumni-vic-au-chapter.appspot.com",
-          messagingSenderId: "184954500444",
-          appId: "1:184954500444:web:99ca6777b5b335e3fc7d99",
-          measurementId: "G-Z7N04QN058"
-        }
-      }
-    }
+          apiKey: process.env.JMI_API_KEY,
+          authDomain: process.env.JMI_AUTH_DOMAIN,
+          projectId: process.env.JMI_PROJECT_ID,
+          storageBucket: process.env.JMI_STORAGE_BUCKET,
+          messagingSenderId: process.env.JMI_MESSAGING_SENDER_ID,
+          appId: process.env.JMI_APP_ID,
+          measurementId: process.env.JMI_MEASUREMENT_ID,
+        },
+      },
+    },
   ],
-  
 };
