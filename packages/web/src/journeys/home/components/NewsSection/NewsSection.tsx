@@ -146,17 +146,14 @@ function NewsSection() {
       <SectionTitle>News and Events</SectionTitle>
       <ArticlesContainer>
         {data.map(article => (
-          <>
-            <Card key={article.id}>
-              <img src={article.featuredImage} alt="" width="100%" />
-              <CardContent>
-                <CardTitle>{article.title}</CardTitle>
-                <Byline>{article.byline}</Byline>
-                <LinkButton type="button" onClick={() => openModal(article.id)}>Read More</LinkButton>
-              </CardContent>
-            </Card>
-
-          </>
+          <Card key={article.id}>
+            <img src={article.featuredImage} alt="" width="100%" />
+            <CardContent>
+              <CardTitle>{article.title}</CardTitle>
+              <Byline>{article.byline}</Byline>
+              <LinkButton type="button" onClick={() => openModal(article.id)}>Read More</LinkButton>
+            </CardContent>
+          </Card>
         ))}
       </ArticlesContainer>
       <Modal

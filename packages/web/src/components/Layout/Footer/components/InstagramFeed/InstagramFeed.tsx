@@ -53,7 +53,7 @@ function InstagramFeed() {
       <h4>Instagram Feed</h4>
       <Container>
         {data.map(item => (
-          <Polaroid><img src={item.instaImage} alt={item.altText} width="100%" /></Polaroid>
+          <Polaroid key={item.id}><img src={item.instaImage} alt={item.altText} width="100%" /></Polaroid>
         ))}
       </Container>
     </div>
