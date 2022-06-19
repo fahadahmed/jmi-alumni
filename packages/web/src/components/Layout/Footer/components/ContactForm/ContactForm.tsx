@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { db, collection, addDoc } from '../../../../../config/firebase';
 import Input from '../../../../Input';
 import Textarea from '../../../../Textarea';
 import Button from '../../../../Button';
@@ -61,7 +62,7 @@ const SubmitMessage = styled.p`
 function ContactForm() {
   const [submitMessage, setSubmitMessage] = useState(null);
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     const target = e.target as typeof e.target & {
       name: { value: string };
@@ -72,7 +73,13 @@ function ContactForm() {
     const email = target.email.value;
     const message = target.message.value;
     setSubmitMessage('Your message has been submitted.')
+    const docRef = await addDoc(collection(db, 'contactFormData'), {
+      name,
+      email,
+      message
+    });
     console.log(name, email, message);
+    console.log('Document written with ID:', docRef.id);
     document.getElementById("contact-form").reset();
     setTimeout(() => { setSubmitMessage(null) }, 3000);
   }
