@@ -9,7 +9,7 @@ import {
   setDoc,
   connectFirestoreEmulator,
 } from 'firebase/firestore/lite';
-// import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
+import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 const firebaseConfig = {
   apiKey: process.env.JMI_API_KEY,
@@ -22,15 +22,24 @@ const firebaseConfig = {
 };
 
 const fire = initializeApp(firebaseConfig);
-// @TODO - add AppCheck to the project to protect database
-// const appCheck = initializeAppCheck(fire, {
+// initializeAppCheck(fire, {
 //   provider: new ReCaptchaV3Provider(process.env.JMI_RECAPTCHA_CLIENT_ID),
 // });
 const db = getFirestore(fire);
 
-if (location.hostname === 'localhost') {
+if (process.env.NODE_ENV === 'development') {
   connectFirestoreEmulator(db, 'localhost', 8081);
 }
 
 export default fire;
-export { db, collection, doc, getDocs, getDoc, addDoc, setDoc };
+export {
+  db,
+  collection,
+  doc,
+  getDocs,
+  getDoc,
+  addDoc,
+  setDoc,
+  initializeAppCheck,
+  ReCaptchaV3Provider,
+};
