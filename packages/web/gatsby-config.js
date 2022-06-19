@@ -24,6 +24,7 @@ module.exports = {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-emotion',
+    'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -47,6 +48,13 @@ module.exports = {
           appId: process.env.JMI_APP_ID,
           measurementId: process.env.JMI_MEASUREMENT_ID,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.JMI_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.JMI_CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
