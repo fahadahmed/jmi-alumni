@@ -65,9 +65,9 @@ const data = [
   },
   {
     id: 2,
-    name: 'Dr Vikrant Kishore',
+    name: 'Akhtar Shamim',
     designation: 'Vice President',
-    profileImage: 'https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/vikrant.png?alt=media&token=78553fa7-83f1-4173-b283-6fe9acd051c3'
+    profileImage: 'https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/akhtar.png?alt=media&token=544862ba-94e0-4380-be63-ca0ad9e1b453'
   },
   {
     id: 3,
@@ -89,12 +89,6 @@ const data = [
   },
   {
     id: 6,
-    name: 'Akhtar Shamim',
-    designation: 'Advisor',
-    profileImage: 'https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/akhtar.png?alt=media&token=544862ba-94e0-4380-be63-ca0ad9e1b453'
-  },
-  {
-    id: 7,
     name: 'Saad Ahmad',
     designation: 'Advisor',
     profileImage: 'https://firebasestorage.googleapis.com/v0/b/jmi-alumni-vic-au-chapter.appspot.com/o/saad.png?alt=media&token=913fd056-35cc-46df-bc22-78be501b094f'
