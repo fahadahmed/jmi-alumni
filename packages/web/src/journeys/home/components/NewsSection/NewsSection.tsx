@@ -143,7 +143,7 @@ function NewsSection() {
 
   return (
     <Container>
-      <SectionTitle>News and Events</SectionTitle>
+      <SectionTitle>Our News</SectionTitle>
       <ArticlesContainer>
         {data.map(article => (
           <Card key={article.id}>

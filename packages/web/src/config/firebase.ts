@@ -9,6 +9,7 @@ import {
   setDoc,
   connectFirestoreEmulator,
 } from 'firebase/firestore/lite';
+import { getStorage, ref, listAll } from 'firebase/storage';
 import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 const firebaseConfig = {
@@ -26,6 +27,7 @@ const fire = initializeApp(firebaseConfig);
 //   provider: new ReCaptchaV3Provider(process.env.JMI_RECAPTCHA_CLIENT_ID),
 // });
 const db = getFirestore(fire);
+const storage = getStorage(fire);
 
 if (process.env.NODE_ENV === 'development') {
   connectFirestoreEmulator(db, 'localhost', 8081);
@@ -40,6 +42,9 @@ export {
   getDoc,
   addDoc,
   setDoc,
+  storage,
+  ref,
+  listAll,
   initializeAppCheck,
   ReCaptchaV3Provider,
 };
