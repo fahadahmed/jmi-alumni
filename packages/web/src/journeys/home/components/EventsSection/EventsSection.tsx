@@ -35,7 +35,7 @@ function EventsSection() {
     <div>
       <SectionTitle>Our Latest Events</SectionTitle>
       <Byline>The annual dinner for Jamia's 102nd Foundation Day hosted at Waterview Boulevard, Craigeburn.</Byline>
-      <Carousel cols={1} rows={1} gap={10} loop>
+      <Carousel cols={1} rows={1} gap={10} loop mobileBreakpoint={767}>
         {eventImages.map((eventImage, index) => (
           <Carousel.Item>
             <img width="100%" src={eventImage} key={index} />
