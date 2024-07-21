@@ -5,3 +5,7 @@ coverage
 .env
 .firebase
 .nx
+
+
+.nx/cache
+.nx/workspace-data

@@ -1,18 +1,65 @@
 {
   "namedInputs": {
-    "noMarkdown": ["!{projectRoot}/**/*.md"]
+    "noMarkdown": [
+      "!{projectRoot}/**/*.md"
+    ]
   },
   "targetDefaults": {
     "build": {
-      "inputs": ["noMarkdown", "^noMarkdown"],
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "cache": true
     },
     "dev": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^dev"
+      ]
     },
     "test": {
-      "inputs": ["noMarkdown", "^noMarkdown"]
+      "inputs": [
+        "noMarkdown",
+        "^noMarkdown"
+      ]
+    },
+    "build:watch": {
+      "dependsOn": [
+        "^build:watch"
+      ]
+    },
+    "serve": {
+      "dependsOn": [
+        "^serve"
+      ]
+    },
+    "start": {
+      "dependsOn": [
+        "^start"
+      ]
+    },
+    "deploy": {
+      "dependsOn": [
+        "^deploy"
+      ]
+    },
+    "logs": {
+      "dependsOn": [
+        "^logs"
+      ]
+    },
+    "preview": {
+      "dependsOn": [
+        "^preview"
+      ],
+      "cache": true
+    },
+    "astro": {
+      "dependsOn": [
+        "^astro"
+      ]
     }
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "nxCloudAccessToken": "Y2Y2MjJmMGEtMmMxNi00OTlmLTkxOWYtY2I0NTZjYTM1OGY4fHJlYWQtd3JpdGU="
 }

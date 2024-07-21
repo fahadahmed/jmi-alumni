@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       nx:
-        specifier: ^19.5.1
+        specifier: 19.5.1
         version: 19.5.1
       vite:
         specifier: ^5.3.4
