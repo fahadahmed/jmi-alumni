@@ -1,16 +1,29 @@
 ---
+import { contentfulClient } from '../libs/contentful';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import type { EntryFieldTypes } from 'contentful';
 
+interface BlogPost {
+  contentTypeId: 'post';
+  fields: {
+    title: EntryFieldTypes.Text;
+    slug: EntryFieldTypes.Text;
+    content: EntryFieldTypes.RichText;
+  };
+}
+
+const entries = await contentfulClient.getEntries<BlogPost>({
+  content_type: 'post',
+});
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>JMI Alumni Association | Victoria, Australia</title>
-  </head>
-  <body>
-    <h1>JMI Alumni VIC Australia Chapter</h1>
-  </body>
-</html>
+<body>
+  {
+    entries.items.map((item) => (
+      <section>
+        <h2>{item.fields.title}</h2>
+        <article set:html={documentToHtmlString(item.fields.content)} />
+      </section>
+    ))
+  }
+</body>
