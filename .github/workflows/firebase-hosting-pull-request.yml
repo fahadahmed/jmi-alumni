@@ -19,9 +19,9 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - name: Set Contentful Environment Variables
         run: |
-          echo "CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}" > $GITHUB_ENV
-          echo "CONTENTFUL_DELIVERY_TOKEN=${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}" > $GITHUB_ENV
-          echo "CONTENTFUL_PREVIEW_TOKEN=${{ secrets.CONTENTFUL_PREVIEW_TOKEN }}" > $GITHUB_ENV
+          echo "CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}" >> $GITHUB_ENV
+          echo "CONTENTFUL_DELIVERY_TOKEN=${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}" >> $GITHUB_ENV
+          echo "CONTENTFUL_PREVIEW_TOKEN=${{ secrets.CONTENTFUL_PREVIEW_TOKEN }}" >> $GITHUB_ENV
       - run: pnpm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
